@@ -10,7 +10,7 @@ namespace Terningespil
         {
             while (true)
             {
-                Console.WriteLine("Try again? (y) \nExit? (e) \nStats? (s)");
+                Console.WriteLine("\nTry again? (y) \nExit? (e) \nStats? (s)");
                 string input = Console.ReadLine();
                 
                 if (string.IsNullOrEmpty(input))
@@ -32,7 +32,6 @@ namespace Terningespil
                 }
                 else if (userChoice == 'e')
                 {
-                    Console.WriteLine("Goodbye!");
                     break;
                 }
                 else

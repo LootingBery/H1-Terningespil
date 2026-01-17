@@ -18,7 +18,7 @@
 
         public static void SixCounter()
         {
-            Console.WriteLine($"You have rolled a six {AmountOfSix} times \nDuring this round you got {AmountOfSixDuringRun} sixes");
+            Console.WriteLine($"\nYou have rolled a six {AmountOfSix} times \nDuring this round you got {AmountOfSixDuringRun} sixes");
         }
     }
 }
