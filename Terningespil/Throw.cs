@@ -1,9 +1,13 @@
-﻿namespace Terningespil
+﻿using System.Diagnostics;
+
+namespace Terningespil
 {
     public class Throw
     {
         public static void Main()
         {
+            Stopwatch timeCounter = new Stopwatch();
+
             Console.WriteLine("How many dice would you like to roll? (1-9)");
             string input = Console.ReadLine();
 
@@ -25,6 +29,7 @@
                 attempts++;
                 int total = 0;
                 allSixes = true;
+                timeCounter.Start();
 
                 Console.WriteLine($"Attempt #{attempts}:");
                 for (int i = 0; i < numberOfDice; i++)
@@ -49,8 +54,10 @@
                     Console.WriteLine("  \nNot all sixes, rolling again...\n");
                 }
             }
+            timeCounter.Stop();
+            TimeSpan.elapsed timeCounter.Elapsed;
 
-            Console.WriteLine($"\nAll {numberOfDice} dice showed 6! \nIt took {attempts} attempt(s).\n");
+            Console.WriteLine($"\nAll {numberOfDice} dice showed 6! \nIt took {attempts} attempts. It took a total of {elapsed}\n");
             
  
             Count.ThrowCounter();
